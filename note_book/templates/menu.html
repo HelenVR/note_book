@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Contact Manager</h1>
+    <ul>
+        <li><a href="{{ url_for('show_contacts') }}">Показать все контакты</a></li>
+        <li><a href="{{ url_for('create_contact_view') }}">Создать контакт</a></li>
+        <li><a href="{{ url_for('find_contact_view') }}">Найти контакт</a></li>
+        <li><a href="{{ url_for('delete_contact_view') }}">Удалить контакт</a></li>
+        <li><a href="{{ url_for('update_contact_view') }}">Обновить контакт</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все контакты</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Все контакты</h1>
+    <ul>
+    {% for contact in contacts %}
+        <li>
+            <span style="font-weight: bold;">{{ contact[1] }} {{ contact[2] }}</span> |
+            <span style="color: #30799B;">Телефон: {{ contact[3] }}</span> |
+            <span style="color: #30799B;">Комментарий: {{ contact[4] }}</span>
+        </li>
+    {% endfor %}
+    </ul>
+    <a href="/download">Скачать контакты</a>
+    <a href="{{ url_for('menu') }}">Назад в меню</a>
+</body>
+</html>

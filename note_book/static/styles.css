@@ -1,0 +1,130 @@
+body {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       height: 90vh;
+       margin: 0;
+       background-color: #f0f0f0;
+   }
+   h1 {
+       font-size: 48px;
+       text-transform: uppercase;
+       margin-bottom: 20px;
+       color: darkslategray;
+   }
+   form {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       font-family: 'Montserrat', sans-serif;
+       color: #30799B
+   }
+   input {
+       font-size: 18px;
+       margin: 10px 0;
+       padding: 10px;
+       width: 300px;
+   }
+   button {
+       font-size: 18px;
+       margin-top: 10px;
+       padding: 10px 20px;
+       cursor: pointer;
+   }
+   ul {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+   }
+   ul li a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #30799B;
+    }
+   a {
+       text-decoration: none;
+       color: #555555;
+       margin-top: 23px;
+       font-family: 'Montserrat', sans-serif;
+   }
+   li {
+            font-size: 24px;
+            margin: 5px 0;
+       font-family: 'Montserrat', sans-serif;
+        }
+   a:hover {
+       text-decoration: underline;
+   }
+   .error-message {
+    color: red;
+    margin: 25px 0;
+    font-size: 20px;
+    text-align: center;
+       font-family: 'Montserrat', sans-serif;
+   }
+   .error {
+    color: red;
+    margin: 25px 0;
+    font-size: 30px;
+    text-align: center;
+       font-family: 'Montserrat', sans-serif;
+   }
+
+   .success-message {
+    color: green;
+    margin: 20px 0;
+    font-size: 25px;
+    text-align: center;
+       font-family: 'Montserrat', sans-serif;
+   }
+   .contact-card {
+       border: 5px solid #ccc;
+       border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", sans-serif;
+   }
+
+   .montserrat-body {
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+   }
+   .contact-card strong {
+    color: #333;
+   }
+
+/*form {*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*}*/
+
+form label {
+    font-family: 'Montserrat', sans-serif;
+    color: #30799B;
+}
+
+form input {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+}
+
+form button {
+    font-family: 'Montserrat', sans-serif; /* Шрифт для кнопки */
+    color: #30799B;
+}
+
+  /* .open-sans-<uniquifier> {*/
+  /*font-family: "Open Sans", sans-serif;*/
+  /*font-optical-sizing: auto;*/
+  /*font-weight: <weight>;*/
+  /*font-style: normal;*/
+  /*font-variation-settings:*/
+  /*  "wdth" 100;*/
+  /*}*/

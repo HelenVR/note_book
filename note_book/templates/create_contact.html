@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление контакта</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function(){
+            $("#phone_number").inputmask({
+                mask: "+7(999)999-99-99",
+                placeholder: " ",
+                showMaskOnHover: false,
+                showMaskOnFocus: true
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Добавить контакт</h1>
+    {% if error_message %}
+        <div class="error-message">{{ error_message }}</div>
+    {% endif %}
+
+    {% if message %}
+        <div class="success-message">{{ message }}</div>
+    {% endif %}
+    <form action="/create_contact" method="POST">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="phone_number">Телефон:</label>
+        <input type="text" id="phone_number" name="phone_number" placeholder="+7 (900) 000-00-00" required>
+
+        <label for="comment">Комментарий:</label>
+        <input type="text" id="comment" name="comment">
+
+        <button type="submit">Добавить</button>
+    </form>
+    <a href="{{ url_for('menu') }}">Назад в меню</a>
+</body>
+</html>
