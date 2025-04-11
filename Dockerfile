@@ -15,18 +15,7 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-interaction --no-root --only main
 
-
-RUN apt-get update && \
-    apt-get install -y curl \
-    traceroute \
-    mc \
-    tcpdump \
-    telnet \
-    dnsutils \
-    iputils-ping \
-    && apt-get clean autoclean && apt-get autoremove --yes && rm -rf /var/lib/{apt,dpkg,cache,log}
-
 ENV APP_HOST="0.0.0.0"
 ENV APP_PORT=7001
-CMD ["python", "note_book/app.py"]
+CMD ["python", "-m", "note_book.app"]
 EXPOSE ${APP_PORT}
