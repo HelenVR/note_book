@@ -7,13 +7,14 @@ WORKDIR $APP_DIR
 COPY . ./
 
 ENV VIRTUAL_ENV "${APP_DIR}/venv"
-RUN python3.11 -m venv $VIRTUAL_ENV
+RUN python3.12 -m venv $VIRTUAL_ENV
 ENV PATH "$VIRTUAL_ENV/bin:$PATH"
 
-RUN pip3.11 install poetry
+RUN pip3.12 install poetry
 COPY pyproject.toml poetry.lock ./
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-interaction --no-root --only main
+
 
 RUN apt-get update && \
     apt-get install -y curl \

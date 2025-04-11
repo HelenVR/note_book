@@ -1,9 +1,11 @@
 #!/bin/sh
 docker rm -f note_book
 docker run \
--v $(pwd)/configs/config.yaml:/usr/note_book/configs/config.yaml \
+-e APP_PORT=7001 \
+-e CONFIG_FILE=/usr/note_book/note_book/configs/config.yaml \
+-v $(pwd)/note_book/configs/config.yaml:/usr/note_book/note_book/configs/config.yaml \
 --network=host \
 --restart=always \
---name=netris_reports \
+--name=note_book \
 --detach=true \
-netris_reports:1.0.0
+note_book:1.0.0

@@ -3,8 +3,8 @@ import sys
 
 from loguru import logger
 
-from note_book.configs.config import Config
-from note_book.exceptions import ContactNotFoundError, DuplicateContactError
+from configs.config import Config
+from exceptions import ContactNotFoundError, DuplicateContactError
 
 
 class DbWorker:

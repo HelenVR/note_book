@@ -4,9 +4,9 @@ from flask import Flask, render_template, request, make_response, send_file
 import csv
 import re
 
-from note_book.db import DbWorker
-from note_book.configs.config import load_config
-from note_book.exceptions import DuplicateContactError, ContactNotFoundError
+from db import DbWorker
+from configs.config import load_config
+from exceptions import DuplicateContactError, ContactNotFoundError
 
 app = Flask(__name__)
 app.db_config = load_config()
