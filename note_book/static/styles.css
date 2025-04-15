@@ -12,6 +12,7 @@ body {
        text-transform: uppercase;
        margin-bottom: 20px;
        color: darkslategray;
+       font-family: 'Montserrat', sans-serif;
    }
    form {
        display: flex;
@@ -101,10 +102,6 @@ body {
     color: #333;
    }
 
-/*form {*/
-/*    font-family: 'Montserrat', sans-serif;*/
-/*}*/
-
 form label {
     font-family: 'Montserrat', sans-serif;
     color: #30799B;
@@ -120,11 +117,3 @@ form button {
     color: #30799B;
 }
 
-  /* .open-sans-<uniquifier> {*/
-  /*font-family: "Open Sans", sans-serif;*/
-  /*font-optical-sizing: auto;*/
-  /*font-weight: <weight>;*/
-  /*font-style: normal;*/
-  /*font-variation-settings:*/
-  /*  "wdth" 100;*/
-  /*}*/

@@ -1,5 +1,4 @@
 import os
-
 from flask import Flask, render_template, request, make_response, send_file
 import csv
 import re
@@ -124,6 +123,8 @@ def delete_contact_view():
 @app.route('/download')
 def download():
     contacts = app.db_worker.get_all_contacts()
+    if not contacts:
+        return render_template('contacts.html', error_message="Список контактов пуст")
     csv_file = 'contacts.csv'
 
     with open(csv_file, 'w', newline='', encoding='utf-8') as file:

@@ -7,6 +7,11 @@
 </head>
 <body>
     <h1>Все контакты</h1>
+
+    {% if error_message %}
+        <div class="error-message">{{ error_message }}</div>
+    {% endif %}
+
     <ul>
     {% for contact in contacts %}
         <li>
@@ -16,7 +21,9 @@
         </li>
     {% endfor %}
     </ul>
-    <a href="/download">Скачать контакты</a>
-    <a href="{{ url_for('menu') }}">Назад в меню</a>
+    <ul>
+        <li><a href="/download">Скачать контакты</a></li>
+        <li><a href="{{ url_for('menu') }}">Назад в меню</a></li>
+        </ul>
 </body>
 </html>
